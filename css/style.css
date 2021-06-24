@@ -1,0 +1,181 @@
+/* Arquivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body{
+  background-color: #E5E5E5;
+  font-family: 'Kavivanar', cursive;
+}
+
+.logo{
+  float: left;
+  width: 230px;
+  height:70px;
+  margin-top:-30px;
+  margin-left: -30px;
+  background: url(../imagens/Logo-evenWEB.png) center center/230px no-repeat;
+}
+
+.cabecalho {
+  width: 100%;
+  height: 125px;
+  float: left;
+  padding: 3% 4%;
+  margin-bottom: 5px;
+  background-color: #F0F8FF;
+}
+/* Menu */
+
+.nav_menu{
+    display: none;
+    top: 0%;
+    left: 0%;
+    width:auto;
+    height: 40px;
+    line-height: 20px;
+    float:right;
+    background-color: #F0F8FF;
+    display: block !important;
+    position: static;
+    color: #000000;
+}
+
+ .nav_menu ul{
+    width: 100%;
+    float: left;
+    text-align: center;
+ }
+
+ .nav_menu ul li{
+    padding: 2%;
+    float: left;
+    position:relative;
+    color: #0000df;
+ }
+
+ .nav_menu ul li a{
+    color: #000000;
+    font-size: 1em;
+    padding:0%;
+    margin-left: 1%
+ }
+
+ .nav_menu ul li  ul{
+ position:absolute;
+ top:30px;
+ left:0;
+ background-color:#FDFDFD;
+ display:none;
+ }
+
+ .nav_menu ul li a:hover {
+    border: none;
+    color: #101010;
+    text-shadow:0px 0px 5px #009186;
+ }
+
+ .nav_menu ul li ul li{
+    display:block;
+    margin-top: 4px;
+    width:79px;
+    height: 30px;
+}
+.nav_menu li:hover ul, .menu li.over ul{
+    border-radius: 0.3vw;
+    display:block;
+}
+
+.conteudoMenu{
+    width: 25vw; /*unidade que visa associar o valor à largura da tela*/
+    margin-left: auto; /*Duas linhas que centralizar um elemento*/
+    margin-right: auto;
+}
+
+/* FOOTER */
+/* RODAPE */
+
+.rodape{
+    width: 100%;
+    text-align: center;
+    padding: 2% 3%;
+    background: #F0F8FF;
+    display: grid;
+    grid-template-areas:
+    "twitter instagram facebook"
+    "copyright copyright copyright";
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 150px 50px;
+}
+
+.twitter{
+  grid-area: twitter;
+  height: 70px;
+  text-align: right;
+}
+
+.instagram{
+  grid-area: instagram;
+  height: 70px;
+}
+
+.facebook{
+  grid-area: facebook;
+  height: 70px;
+  text-align: left;
+}
+
+#twitter{
+  width: 45px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+#instagram{
+  width: 68px;
+  height: 68px;
+  margin: auto;
+}
+
+#facebook{
+  width: 55px;
+  height: 55px;
+  margin-top: 8px;
+}
+
+#span_twitter{
+  position: relative;
+  top: -25%;
+  transform: translateY(-50%);
+}
+
+#span_instagram{
+  position: relative;
+  top: -43%;
+  transform: translateY(-50%);
+}
+
+#span_facebook{
+  position: relative;
+  top: -36%;
+  transform: translateY(-50%);
+}
+
+.descri_copyright{
+  grid-area: copyright;
+  position: center;
+}
