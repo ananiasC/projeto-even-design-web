@@ -1,5 +1,6 @@
 /* Arquivo CSS */
 @import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 * {
     margin: 0;
@@ -39,8 +40,8 @@ body{
   margin-bottom: 5px;
   background-color: #F0F8FF;
 }
-/* Menu */
 
+/* MENU */
 .nav_menu{
     display: none;
     top: 0%;
@@ -53,6 +54,7 @@ body{
     display: block !important;
     position: static;
     color: #000000;
+    font-size: 18px;
 }
 
  .nav_menu ul{
@@ -104,6 +106,128 @@ body{
     width: 25vw; /*unidade que visa associar o valor à largura da tela*/
     margin-left: auto; /*Duas linhas que centralizar um elemento*/
     margin-right: auto;
+}
+/* DESCRICAO EVEN */
+#descricao_even{
+  width: 80%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
+  margin-bottom: 10px;
+  background-color: #F0FDFF;
+  font-family: 'Abel', sans-serif;
+  font-size: 28px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#descricao_even p{
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.destaque_span{
+  color: #df0006; # VERMELHO
+}
+
+/* PORTIFOLIO */
+
+#portifolio{
+  margin-bottom: 10px;
+  background-color: #F0F8FF;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-areas:
+  "titulo titulo titulo"
+  "esquerda centro direita"
+  "vazio vazio vazio";
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 30px 1fr 10px;
+}
+
+#titulo_portifolio{
+  grid-area: titulo;
+  text-align: center;
+  font-size: 28px;
+}
+
+.itens_esquerda{
+  grid-area: esquerda;
+  width: 430px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.itens_centro{
+  grid-area: centro;
+  width: 430px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.itens_direita{
+  grid-area: direita;
+  width: 430px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item{
+    width: 430px;
+    height: 540px;
+    margin-top: 10px;
+    background-color: #F0FDFF;
+    display: grid;
+    grid-template-areas:
+    "tituloItem"
+    "imagem"
+    "texto"
+    "link";
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 30px 1fr 1fr 25px;
+}
+
+.item h2{
+  grid-area: tituloItem;
+  margin-left: 15px;
+  font-size: 22px;
+}
+
+.item img{
+  grid-area: imagem;
+  width: 400px;
+  height:360px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.item p{
+  grid-area: texto;
+  text-align: justify;
+  margin-left: 15px;
+  width: 400px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+item a{
+  grid-area: link;
+}
+
+.link_itens{
+  text-align: center;
 }
 
 /* FOOTER */
