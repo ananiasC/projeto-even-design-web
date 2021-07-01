@@ -19,7 +19,7 @@ ul {
     list-style: none;
 }
 body{
-  background-color: #E5E5E5;
+  background-color: #F5F5F5;
   font-family: 'Kavivanar', cursive;
 }
 
@@ -38,7 +38,7 @@ body{
   float: left;
   padding: 3% 4%;
   margin-bottom: 5px;
-  background-color: #F0F8FF;
+  background-color: #E2F2FF;
 }
 
 /* MENU */
@@ -50,7 +50,7 @@ body{
     height: 40px;
     line-height: 20px;
     float:right;
-    background-color: #F0F8FF;
+    background-color: #E2F2FF;
     display: block !important;
     position: static;
     color: #000000;
@@ -115,7 +115,7 @@ body{
   margin-right: auto;
   margin-top: 110px;
   margin-bottom: 10px;
-  background-color: #F0FDFF;
+  background-color: #F0F8FF;
   font-family: 'Abel', sans-serif;
   font-size: 28px;
   align-items: center;
@@ -188,7 +188,8 @@ body{
     width: 430px;
     height: 540px;
     margin-top: 10px;
-    background-color: #F0FDFF;
+    background-color: #E2F2FF;
+    border-radius: 3px;
     display: grid;
     grid-template-areas:
     "tituloItem"
@@ -431,7 +432,7 @@ body{
     width: 100%;
     text-align: center;
     padding: 2% 3%;
-    background: #F0F8FF;
+    background: #E2F2FF;
     display: grid;
     grid-template-areas:
     "twitter instagram facebook"
