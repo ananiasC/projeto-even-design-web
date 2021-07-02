@@ -23,7 +23,33 @@
       </nav>
     </header>
     <main>
-
+      <br><br>
+      <form action="" method="post">
+          <div>
+              <label for="nome">Nome completo:</label><br>
+              <input type="texto" id="nome" placeholder="  Ex.: Antonio C. Pinto" name="nome_usuario">
+          </div>
+          <div>
+              <label for="email">E-mail:</label><br>
+              <input type="text" id="email" placeholder="  Ex.: seuemail@email.com" name="email_usuario">
+          </div>
+          <div>
+              <label for="email">Telefone para contato:</label><br>
+              <input type="text" id="telefone" placeholder="  Ex.: (00)00000-0000" name="telefone_usuario">
+          </div>
+          <div>
+              <label for="email">CPF/CNPJ:</label><br>
+              <input type="text" placeholder="  Ex.: 000.000.000-00" data-mask="000.000.000-00" id="CPF" name="CPF_usuario">
+          </div>
+          <div>
+              <label for="texto">Motivo do contato:</label><br>
+              <textarea id="texto" name="texto_usuario" placeholder=" Insira seu texto aqui..."></textarea>
+          </div>
+      <div class="button">
+          <button type="submit">Enviar</button>
+      </div>
+      </form>
+      
     </main>
     <footer class="rodape">
       <div class="twitter">

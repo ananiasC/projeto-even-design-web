@@ -595,3 +595,82 @@ body{
   grid-area: copyright;
   position: center;
 }
+
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 1em;
+  border: 5px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 450px;
+  box-sizing: border-box;
+  border: 2px solid #999;
+  border-radius: 10px;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+  max-height:500px;
+  resize: none
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  margin-left: 4em;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.button button:hover {
+    border: none;
+    color: #101010;
+    text-shadow:0px 0px 5px #009186;
+ }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #E5E5E5;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.imagem {
+        width: 95vw;
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+}
+.central {
+        width:500px;
+        height: 375px;
+}
