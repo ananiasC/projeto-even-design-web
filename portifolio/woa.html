@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Site de Eventos Even">
+    <meta name="author_1" content="Ananias C. Oliveira">
+    <meta name="author_2" content="Roney N. Sousa">
+    <title>Even</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../imagens/Logo-evenWEB.png" />
+    <script src="../js/script.js"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="../index.html"><div class="logo"></div></a>
+      <nav class="nav_menu conteudoMenu">
+          <ul class="ul_menu">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../galeria.html">Galeria</a></li>
+              <li><a href="../colaboradores.html">Colaboradores</a></li>
+              <li><a href="../contato.html">Contato</a></li>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="portifolio_even">
+        <h1 class="titulo_portifolio tituloajuste">Wacken Open Air 2019</h1>
+        <div class="topo">
+          <p class="texto_topo">
+            Wacken Open Air (W:O:A) é um festival de heavy metal que acontece no verão europeu, ao ar livre. Ele ocorre anualmente na pequena vila de Wacken, em Schleswig-Holstein, norte da Alemanha. Todos os anos, o festival atrai dezenas de milhares de pessoas, provenientes dos mais diferentes países, além de fãs de black metal, death metal, power metal, thrash metal, symph metal, folk metal e até mesmo metalcore, new metal e hard rock.
+            A primeira edição do festival aconteceu em agosto de 1990 e envolveu apenas bandas relativamente desconhecidas alemãs. Inicialmente, o casting costumava ser formado principalmente por conjuntos da Escandinávia e da Europa em geral; posteriormente, bandas brasileiras, australianas e estadunidenses, dentre outras, também passaram a se fazer presentes em diferentes edições do festival. Gradativamente, o evento foi evoluindo ao longo de suas diversas edições e, atualmente, é considerado o maior festival de heavy metal do continente europeu. Tendo uma duração inicial de apenas dois dias, posteriormente o festival passou a se estender por três dias.
+          </p>
+          <img class="imagem_do_topo" src="../imagens/eventos/woa.jpg" alt="Wacken Open Air">
+        </div>
+
+      </div>
+      <div class="imagens">
+        <div class="tituloTopicoImagem">
+          <h2>Galeria de Imagens</h2>
+          <button type="button" class="sanfona" onclick="mudaEstadoImagem()"><img src="../imagens/menos.png" id="imagensbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+        <div class="imagens_esquerda" id="imagens_esquerda">
+          <img src="../imagens/eventos/woa/wacken-1.jpg" alt="Wacken Open Air">
+          <img src="../imagens/eventos/woa/wacken-2.jpg" alt="Wacken Open Air">
+        </div>
+
+        <div class="imagens_direita" id="imagens_direita">
+          <img src="../imagens/eventos/woa/wacken-3.jpg" alt="Wacken Open Air">
+          <img src="../imagens/eventos/woa/wacken-4.jpg" alt="Wacken Open Air">
+        </div>
+      </div>
+      </div>
+      <div class="videos">
+        <div class="tituloTopicoVideos">
+          <h2>Galeria de Vídeos</h2>
+          <button type="button" class="sanfona" onclick="mudaEstadoVideo()"><img src="../imagens/menos.png" id="videosbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+
+        <div class="slider"  id="videos">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 1</div>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/pcJgzqrulDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+      </script>
+    </main>
+    <footer class="rodape">
+      <div class="twitter">
+        <img id="twitter"  src="../imagens/twitter.png" alt="Icone do Twitter"><span id="span_twitter">@EvenOficial</span>
+      </div>
+      <div class="instagram">
+        <img id="instagram" src="../imagens/instagram.png" alt="Icone do Instagram"><span id="span_instagram">@EvenOficial</span>
+      </div>
+      <div class="facebook">
+        <img id="facebook" src="../imagens/facebook.png" alt="Icone do Facebook"><span id="span_facebook">Even Eventos</span>
+      </div>
+
+      <div class="descri_copyright">
+        Copyright © Calipso Tecno. Todos os direitos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

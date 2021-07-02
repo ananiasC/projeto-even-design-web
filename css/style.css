@@ -414,6 +414,10 @@ body{
   margin-left: 50px;
 }
 
+.slider video{
+  margin-left: 50px;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 900px;
