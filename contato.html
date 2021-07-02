@@ -10,8 +10,8 @@
     <link rel="shortcut icon" href="imagens/Logo-evenWEB.png" />
     <script src="js/script.js"></script>
   </head>
-  <body>
-    <header class="cabecalho">
+  <body id="contatosbody">
+    <header class="cabecalho" id="contatoscabecalho">
       <a href="index.html"><div class="logo"></div></a>
       <nav class="nav_menu conteudoMenu">
           <ul class="ul_menu">
@@ -22,8 +22,7 @@
           </ul>
       </nav>
     </header>
-    <main>
-      <br><br>
+    <main id="contatosmain">
       <form action="" method="post">
           <div>
               <label for="nome">Nome completo:</label><br>
@@ -46,12 +45,11 @@
               <textarea id="texto" name="texto_usuario" placeholder=" Insira seu texto aqui..."></textarea>
           </div>
       <div class="button">
-          <button type="submit">Enviar</button>
+          <button  id="botao" type="submit">Enviar</button>
       </div>
       </form>
-      
     </main>
-    <footer class="rodape">
+    <footer class="rodape" id="contatosrodape">
       <div class="twitter">
         <img id="twitter"  src="imagens/twitter.png" alt="Icone do Twitter"><span id="span_twitter">@EvenOficial</span>
       </div>
