@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="cabecalho">
-      <a href="index.html"><div class="logo"></div></a>
+      <a href="../index.html"><div class="logo"></div></a>
       <nav class="nav_menu conteudoMenu">
           <ul class="ul_menu">
               <li><a href="../index.html">Início</a></li>
@@ -25,6 +25,7 @@
     <main>
       <div class="portifolio_even">
         <h1 class="titulo_portifolio tituloajuste">Torneio de Candidatos da FIDE 2021</h1>
+
         <div class="topo">
             <p class="texto_topo">
               O desafiante do campeão mundial é o vencedor do Torneio de Candidatos, que é uma competição de todos contra todos, em duas voltas, com oito jogadores, disputado em Ecaterimburgo, na Rússia.
@@ -37,38 +38,80 @@
             </p>
             <img class="imagem_do_topo" src="../imagens/eventos/xadrez.png" alt="Evento FIDE 2021">
         </div>
-        <div class="imagens">
+      </div>
+      <div class="imagens">
+        <div class="tituloTopicoImagem">
           <h2>Galeria de Imagens</h2>
-          <div class="imagens_esquerda">
-            <img src="../imagens/eventos/FIDE 2021/candidatos.png" alt="Candidatos">
-            <img src="../imagens/eventos/FIDE 2021/xadrez2.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez3.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez4.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez5.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez11.jpeg" alt="x1">
-          </div>
-
-          <div class="imagens_direita">
-            <img src="../imagens/eventos/FIDE 2021/xadrez.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez6.png" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez7.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez8.jpeg" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez9.png" alt="x1">
-            <img src="../imagens/eventos/FIDE 2021/xadrez10.png" alt="x1">
-          </div>
+          <button type="button" class="sanfona" onclick="mudaEstadoImagem()"><img src="../imagens/menos.png" id="imagensbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+        <div class="imagens_esquerda" id="imagens_esquerda">
+          <img src="../imagens/eventos/FIDE 2021/candidatos.png" alt="Candidatos">
+          <img src="../imagens/eventos/FIDE 2021/xadrez2.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez3.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez4.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez5.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez11.jpeg" alt="x1">
         </div>
 
-        <div class="videos">
-          <h2>Galeria de Vídeos</h2>
-          <ul class="slider">
-              <li>
-                    <input type="radio" id="slide1" name="slide" checked>
-                    <label for="slide1"></label>
-                    <iframe width="800" height="500" src="https://www.youtube.com/embed/JPEEUbGQGn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </li>
-          </ul>
+        <div class="imagens_direita" id="imagens_direita">
+          <img src="../imagens/eventos/FIDE 2021/xadrez.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez6.png" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez7.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez8.jpeg" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez9.png" alt="x1">
+          <img src="../imagens/eventos/FIDE 2021/xadrez10.png" alt="x1">
         </div>
       </div>
+      <div class="videos">
+        <div class="tituloTopicoVideos">
+          <h2>Galeria de Vídeos</h2>
+          <button type="button" class="sanfona" onclick="mudaEstadoVideo()"><img src="../imagens/menos.png" id="videosbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+
+        <div class="slider" id="videos">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 1</div>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/JPEEUbGQGn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+      </script>
     </main>
     <footer class="rodape">
       <div class="twitter">

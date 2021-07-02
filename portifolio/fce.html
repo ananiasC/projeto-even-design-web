@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="cabecalho">
-      <a href="index.html"><div class="logo"></div></a>
+      <a href="../index.html"><div class="logo"></div></a>
       <nav class="nav_menu conteudoMenu">
           <ul class="ul_menu">
               <li><a href="../index.html">Início</a></li>
@@ -27,44 +27,82 @@
         <h1 class="titulo_portifolio tituloajuste">FCE Pharma</h1>
         <div class="topo">
             <p class="texto_topo">
-
-
-  A FCE Pharma — Exposição Internacional de Tecnologia para a Indústria Farmacêutica — é a única e mais completa feira para a indústria na América Latina, reunindo toda a cadeia produtiva do setor, desde insumos farmacêuticos e maquinário, passando por controle de qualidade e rastreabilidade, até a armazenagem e entrega do produto final.
-  Uma plataforma multifuncional com foco em relacionamento, negócios e conteúdo, para não deixar os mercados farmacêutico e cosmético sem um evento para impulsionar a economia.
-
-
-  É a única oportunidade no ano em que toda cadeia produtiva da indústria farmacêutica se reúne. Palco único para apresentação os lançamentos e tendências em produtos e serviços para o setor!
-
-  As mais importantes marcas, conteúdos atuais com renomados profissionais nacionais e internacionais, networking e muito mais esperam por você em mais de 40.000m².
-
+                A FCE Pharma — Exposição Internacional de Tecnologia para a Indústria Farmacêutica — é a única e mais completa feira para a indústria na América Latina, reunindo toda a cadeia produtiva do setor, desde insumos farmacêuticos e maquinário, passando por controle de qualidade e rastreabilidade, até a armazenagem e entrega do produto final.
+                Uma plataforma multifuncional com foco em relacionamento, negócios e conteúdo, para não deixar os mercados farmacêutico e cosmético sem um evento para impulsionar a economia.
+                É a única oportunidade no ano em que toda cadeia produtiva da indústria farmacêutica se reúne. Palco único para apresentação os lançamentos e tendências em produtos e serviços para o setor!
+                As mais importantes marcas, conteúdos atuais com renomados profissionais nacionais e internacionais, networking e muito mais esperam por você em mais de 40.000m².
             </p>
             <img class="imagem_do_topo" src="../imagens/eventos/fce-pharma-2018.jpg" alt="FCE PHARMA">
         </div>
-        <div class="imagens">
-          <h2>Galeria de Imagens</h2>
-          <div class="imagens_esquerda">
-            <img src="../imagens/eventos/fce/FCE2.jpg" alt="FCE">
-            <img src="../imagens/eventos/fce/FCE3.jpg" alt="FCE">
-            <img src="../imagens/eventos/fce/FCE4.jpg" alt="FCE">
-          </div>
 
-          <div class="imagens_direita">
-            <img src="../imagens/eventos/fce/FCE.jpg" alt="FCE">
-            <img src="../imagens/eventos/fce/FCE5.png" alt="FCE">
-          </div>
+      </div>
+      <div class="imagens">
+        <div class="tituloTopicoImagem">
+          <h2>Galeria de Imagens</h2>
+          <button type="button" class="sanfona" onclick="mudaEstadoImagem()"><img src="../imagens/menos.png" id="imagensbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+        <div class="imagens_esquerda" id="imagens_esquerda">
+          <img src="../imagens/eventos/fce/FCE2.jpg" alt="FCE">
+          <img src="../imagens/eventos/fce/FCE3.jpg" alt="FCE">
+          <img src="../imagens/eventos/fce/FCE4.jpg" alt="FCE">
         </div>
 
-        <div class="videos">
-          <h2>Galeria de Vídeos</h2>
-          <ul class="slider">
-              <li>
-                    <input type="radio" id="slide1" name="slide" checked>
-                    <label for="slide1"></label>
-                    <iframe width="800" height="500" src="https://www.youtube.com/embed/JhELp0gyUiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </li>
-          </ul>
+        <div class="imagens_direita" id="imagens_direita">
+          <img src="../imagens/eventos/fce/FCE.jpg" alt="FCE">
+          <img src="../imagens/eventos/fce/FCE5.png" alt="FCE">
         </div>
       </div>
+      </div>
+      <div class="videos">
+        <div class="tituloTopicoVideos">
+          <h2>Galeria de Vídeos</h2>
+          <button type="button" class="sanfona" onclick="mudaEstadoVideo()"><img src="../imagens/menos.png" id="videosbotaoicon" alt="" width="30px" height="39px"></button>
+        </div>
+
+        <div class="slider"  id="videos">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 1</div>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/JhELp0gyUiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+      </script>
     </main>
     <footer class="rodape">
       <div class="twitter">
