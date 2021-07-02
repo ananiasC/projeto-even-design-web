@@ -299,7 +299,51 @@ body{
   grid-auto-rows: 45px 1fr;
 }
 
-.imagens .tituloTopicoImagem{
+.imagensGaleria{
+  background-color: #F0F8FF;
+  width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-areas:
+  "titutofotos titutofotos"
+  "imgesquerda imgdireita"
+  "botaomais botaomais";
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 45px 1fr 50px;
+}
+
+#mais{
+  grid-area: botaomais;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#botaomais{
+  width: 200px;
+  height: 45px;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-family: 'Kavivanar', cursive;
+}
+
+#botaomais img{
+  margin-right: 8px;
+}
+
+#fotosmais, #fotosmais2, #fotosmais3, #fotosmais4, #fotosmais5, #fotosmais6, #fotosmais7, #fotosmais8, #fotosmais9, #fotosmais10{
+  display: none;
+}
+
+.imagens .tituloTopicoImagem, .imagensGaleria .tituloTopicoImagem{
     grid-area: titutofotos;
     background-color: #E2F2FF;
     width: 1536px;
@@ -309,7 +353,7 @@ body{
     grid-auto-columns: 1470px 50px;
 }
 
-.imagens h2{
+.imagens h2, .imagensGaleria h2{
   grid-area: textotopotitulo;
   text-align: center;
   font-size: 28px;

@@ -4,7 +4,7 @@
 - [x] Criar Menu  (Ananias)
 - [x] Criar Rodapé  (Ananias)
 - [ ] Desenvolver Página de Início (Ananias)
-- [ ] Desenvolver Página de Galeria (Ananias)
+- [x] Desenvolver Página de Galeria (Ananias)
 - [ ] Desenvolver Página de Colaboradores (Roney)
 - [ ] Desenvolver Página de Contatos (Roney)
 - [ ] Desenvolver Página de Descrição de cada Evento (Ananias)
